@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+
+    border: 1px dotted white;
 }
 
 body {
@@ -40,6 +42,7 @@ body {
     font-size: 1rem;
     text-decoration: none;
     font-weight: lighter;
+    transition: 1s;
 }
 
 .active {
@@ -48,7 +51,9 @@ body {
 }
 
 .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
-    background-color: #909590;
+    width: 150%;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 /*===================================================== HOME*/
@@ -61,27 +66,28 @@ body {
 
 /*===================================================== MEDIA QUERIES*/
 
-/*X-LARGE*/
+/*X-LARGE (laptop)*/
 @media (max-width:1300px) {
 
 }
 
 
-/*LARGE*/
+/*LARGE (*/
 @media (max-width:992px) {
 
 }
 
 
-/*MEDIUM*/
+/*MEDIUM (iPad)*/
 @media (max-width:768px) {
     .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
-        background-color: transparent;
+        width: 120%;
+        font-size: 1.25rem;
     }
 }
 
 
-/*SMALL*/
+/*SMALL (iPad mini)*/
 @media (max-width: 576px){
     .logo {
         margin: 0 auto;
@@ -109,12 +115,14 @@ body {
     }
 
     .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
-        background-color: transparent;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: lighter;
     }
 
 }
 
-/*X-SMALL*/
+/*X-SMALL (iPhone)*/
 @media (max-width:375px) {
     .about-me,
     .portfolio,
@@ -122,7 +130,4 @@ body {
         margin-top: 15%;
     }
 
-    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
-        background-color: transparent;
-    }
 }
