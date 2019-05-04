@@ -6,3 +6,123 @@ body {
     font-size: 62.5%;
     background-color: #000000;
 }
+
+/*================================================================ NAVBAR*/
+
+.nav-default {
+    width: 15%;
+    background-color: #000000;
+    display: inline-block;
+    height: 100vh;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 20% 0 0 5%;
+    width: 90%;
+    border-radius: 50%;
+}
+
+.home,
+.about-me,
+.portfolio,
+.contacts {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 35%;
+    font-family: "Avenir Next";
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.active {
+    color: #ff0000;
+    font-weight: normal;
+}
+
+.home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+    background-color: #909590;
+}
+
+/*===================================================== HOME*/
+/*===================================================== ABOUT ME*/
+/*===================================================== PORTFOLIO*/
+/*===================================================== CONTACTS*/
+/*===================================================== FOOTER*/
+/*===================================================== ADMIN*/
+
+
+/*===================================================== MEDIA QUERIES*/
+
+/*X-LARGE*/
+@media (max-width:1300px) {
+
+}
+
+
+/*LARGE*/
+@media (max-width:992px) {
+
+}
+
+
+/*MEDIUM*/
+@media (max-width:768px) {
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+        background-color: transparent;
+    }
+}
+
+
+/*SMALL*/
+@media (max-width: 576px){
+    .logo {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .nav-default {
+        width: 100%;
+        background-color: #000000;
+        display: inline-block;
+        height: 100vh;
+    }
+
+    .home {
+        display: none;
+    }
+
+    .about-me,
+    .portfolio,
+    .contacts {
+        float: none;
+        width: 100%;
+        margin-top: 10%;
+        font-size: 2rem;
+    }
+
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+        background-color: transparent;
+    }
+
+}
+
+/*X-SMALL*/
+@media (max-width:375px) {
+    .about-me,
+    .portfolio,
+    .contacts {
+        margin-top: 15%;
+    }
+
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+        background-color: transparent;
+    }
+}
