@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 
-    border: 1px dotted white;
+    /*border: 1px dotted white;*/
 }
 
 body {
@@ -16,6 +16,7 @@ body {
     background-color: #000000;
     display: inline-block;
     height: 100vh;
+    z-index: 2;
 }
 
 .logo {
@@ -43,6 +44,7 @@ body {
     text-decoration: none;
     font-weight: lighter;
     transition: 1s;
+    z-index: 2;
 }
 
 .active {
@@ -63,12 +65,14 @@ body {
     width: 80%;
     float: right;
     margin: 3% 5% 0 0;
+    z-index: 1;
 }
 
 .home-background {
-    width: 80%;
-    opacity: 0.8;
-    border-radius: 10%;
+    width: 100%;
+    /*border-radius: 10%;*/
+    z-index: 1;
+    /*margin-left: 5%;*/
 }
 
 .home-text {
