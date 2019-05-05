@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 
-    border: 1px dotted white;
+    /*border: 1px dotted white;*/
 }
 
 body {
@@ -16,6 +16,7 @@ body {
     background-color: #000000;
     display: inline-block;
     height: 100vh;
+    z-index: 2;
 }
 
 .logo {
@@ -42,7 +43,8 @@ body {
     font-size: 1rem;
     text-decoration: none;
     font-weight: lighter;
-    transition: 1s;
+    transition: 0.5s;
+    z-index: 2;
 }
 
 .active {
@@ -51,12 +53,57 @@ body {
 }
 
 .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
-    width: 150%;
+    width: 160%;
     font-size: 1.6rem;
     font-weight: bold;
 }
 
 /*===================================================== HOME*/
+
+#keyboard {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    float: right;
+    margin: 3% 2% 0 0;
+}
+
+#keyboard img {
+    width: 100%;
+    position:absolute;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+@keyframes keyboardTurnRed {
+    0% {
+        opacity:1;
+    }
+    20% {
+        opacity:0.8;
+    }
+    40% {
+        opacity:0.5;
+    }
+    60% {
+        opacity:0.2;
+    }
+    80% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+#keyboard img.top {
+    animation-name: keyboardTurnRed;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
 /*===================================================== ABOUT ME*/
 /*===================================================== PORTFOLIO*/
 /*===================================================== CONTACTS*/
@@ -68,13 +115,20 @@ body {
 
 /*X-LARGE (laptop)*/
 @media (max-width:1300px) {
-
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+        width: 140%;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
 }
 
 
 /*LARGE (*/
 @media (max-width:992px) {
-
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+        width: 120%;
+        font-size: 1.25rem;
+    }
 }
 
 
@@ -120,6 +174,11 @@ body {
         font-weight: lighter;
     }
 
+    #keyboard {
+        float: none;
+        margin-left: 10%;
+    }
+
 }
 
 /*X-SMALL (iPhone)*/
@@ -130,4 +189,7 @@ body {
         margin-top: 15%;
     }
 
+    #keyboard {
+        display: none;
+    }
 }
