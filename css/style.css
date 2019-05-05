@@ -11,23 +11,19 @@ body {
 
 /*================================================================ NAVBAR*/
 
-.nav-default {
+.navbar {
     width: 15%;
     background-color: #000000;
     display: inline-block;
     height: 100vh;
-    z-index: 2;
+    position: fixed;
+    text-align: center;
 }
 
 .logo {
     display: block;
-    margin: 0 auto;
-}
-
-.logo {
-    margin: 20% 0 0 5%;
+    margin: 5% 0 0 5%;
     width: 90%;
-    border-radius: 50%;
 }
 
 .home,
@@ -38,13 +34,12 @@ body {
     width: 100%;
     color: #ffffff;
     text-align: center;
-    margin-top: 35%;
+    margin-top: 20%;
     font-family: "Avenir Next";
     font-size: 1rem;
     text-decoration: none;
     font-weight: lighter;
     transition: 0.5s;
-    z-index: 2;
 }
 
 .active {
@@ -53,29 +48,57 @@ body {
 }
 
 .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
-    width: 160%;
+    width: 140%;
     font-size: 1.6rem;
     font-weight: bold;
 }
 
+.nav-icons {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.nav-icons .fa {
+    display: block;
+    font-size: 500%;
+    color: #ffffff;
+    margin-top: 5%;
+}
+
+.small-text-links {
+    color: #ffffff;
+    font-family: "Avenir Next";
+    font-size: 0.6rem;
+    text-decoration: none;
+}
+
+.navbar .nav-icons::before,
+.nav-icons::after {
+    content: ' ';
+    display: inline-block;
+    border-bottom: 2px solid #ffffff;
+    opacity: 0.6;
+    width: 80%;
+    margin-top: 5%;
+}
+
 /*===================================================== HOME*/
 
-#keyboard {
+.home-container {
     position: relative;
-    display: inline-block;
     width: 80%;
     float: right;
     margin: 3% 2% 0 0;
 }
 
-#keyboard img {
+.home-container img {
     width: 100%;
     position:absolute;
     transition: opacity 1s ease-in-out;
     z-index: 0;
 }
 
-@keyframes keyboardTurnRed {
+@keyframes keyboardTurnsRed {
     0% {
         opacity:1;
     }
@@ -96,8 +119,8 @@ body {
     }
 }
 
-#keyboard img.top {
-    animation-name: keyboardTurnRed;
+.home-container img.top {
+    animation-name: keyboardTurnsRed;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 2s;
@@ -105,9 +128,29 @@ body {
 }
 
 /*===================================================== ABOUT ME*/
+
+.about-me-pic {
+    position: absolute;
+    margin: 20%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.about-me-content {
+    width: 45%;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    margin: 18% 0 0 50%;
+    font-family: "Open Sans";
+    font-size: 2rem;
+}
+
 /*===================================================== PORTFOLIO*/
 /*===================================================== CONTACTS*/
-/*===================================================== FOOTER*/
+
+
+
 /*===================================================== ADMIN*/
 
 
@@ -138,6 +181,23 @@ body {
         width: 120%;
         font-size: 1.25rem;
     }
+
+    .about-me-pic {
+        position: static;
+        margin: 10% 0 0 35%;
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    .about-me-content {
+        width: 70%;
+        text-align: center;
+        color: #ffffff;
+        position: static;
+        margin: 15% 0 0 23%;
+        font-family: "Open Sans";
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -145,24 +205,32 @@ body {
 @media (max-width: 576px){
     .logo {
         margin: 0 auto;
-        width: 80%;
+        width: 50%;
     }
 
-    .nav-default {
+    .navbar {
+        position: absolute;
         width: 100%;
         background-color: #000000;
         display: inline-block;
-        height: 100vh;
     }
 
-    .home {
+    .nav-icons {
         display: none;
     }
 
+    .small-text-links {
+        display: none;
+    }
+
+    .home-container {
+        display: none;
+    }
+
+    .home,
     .about-me,
     .portfolio,
     .contacts {
-        float: none;
         width: 100%;
         margin-top: 10%;
         font-size: 2rem;
@@ -174,11 +242,39 @@ body {
         font-weight: lighter;
     }
 
-    #keyboard {
-        float: none;
-        margin-left: 10%;
+    #aboutMeNav .logo {
+    display: none;
     }
 
+    #aboutMeNav .home,
+    #aboutMeNav .about-me,
+    #aboutMeNav .portfolio,
+    #aboutMeNav .contacts {
+    width: 100%;
+    margin-top: 0%;
+    font-size: 1.5rem;
+    }
+
+    #aboutMeNav .small-text-links {
+    display: none;
+    }
+
+    #aboutMeContainer .about-me-pic {
+        position: relative;
+        margin: 30% 0 0 30%;
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    #aboutMeContainer .about-me-content {
+        width: 70%;
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+        margin: 10% 0 0 15%;
+        font-family: "Open Sans";
+        font-size: 1.2rem;
+    }
 }
 
 /*X-SMALL (iPhone)*/
@@ -189,7 +285,17 @@ body {
         margin-top: 15%;
     }
 
-    #keyboard {
+    #home {
         display: none;
+    }
+
+    #aboutMeContainer .about-me-pic {
+        margin: 45% 0 0 30%;
+    }
+
+    #aboutMeContainer .about-me-content {
+        width: 90%;
+        margin: 15% 0 0 5%;
+        font-size: 1rem;
     }
 }
