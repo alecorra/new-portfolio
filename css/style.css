@@ -29,7 +29,8 @@ body {
 .home,
 .about-me,
 .portfolio,
-.contacts {
+.contacts,
+.add {
     display: block;
     width: 100%;
     color: #ffffff;
@@ -47,7 +48,11 @@ body {
     font-weight: normal;
 }
 
-.home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+.home:hover,
+.about-me:hover,
+.portfolio:hover,
+.contacts:hover,
+.add:hover {
     width: 140%;
     font-size: 1.6rem;
     font-weight: bold;
@@ -176,60 +181,33 @@ body {
 
 /*===================================================== ADMIN PANEL*/
 
-.admin-new-project,
-.admin-home {
-    display: block;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 75%;
-    font-family: "Avenir Next";
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.admin-new-project:hover,
-.admin-home:hover,
-.admin-edit:hover {
-    background-color: #ff0000;
-}
-
-.admin-delete:hover {
-    background-color: #ffff00;
-}
-
 .admin-container {
     display: inline-block;
     width: 85%;
     float: right;
     margin-top: 3%;
-    margin-right: 1%;
 }
 
 .admin-project-container {
-    width: 90%;
     text-align: center;
-    margin: 0 auto;
 }
 
 .admin-project-link {
-    width: 25%;
+    width: 40%;
     border-radius: 30%;
-    border: 5px solid #5e5d70;
+    border: 5px solid #ffffff;
 }
 
 .admin-edit,
 .admin-delete {
     display: inline-block;
-    margin: 0 auto;
-    width: 10%;
+    margin: 0 3% 0 3%;
+    width: 20%;
     color: #ffffff;
     text-align: center;
     font-family: "Avenir Next";
     font-size: 1rem;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .buttons .admin-delete {
@@ -238,6 +216,18 @@ body {
 
 .buttons {
     margin: 2% 0 10% 0;
+}
+
+.admin-edit:hover {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.buttons .admin-delete:hover {
+    background-color: #ff0000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 /*===================================================== ADMIN FORMS*/
@@ -254,7 +244,7 @@ body {
 
 /*X-LARGE (laptop)*/
 @media (max-width:1300px) {
-    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover, .add:hover {
         width: 140%;
         font-size: 1.6rem;
         font-weight: bold;
@@ -269,7 +259,7 @@ body {
 
 /*LARGE (*/
 @media (max-width:992px) {
-    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover,.add:hover {
         width: 120%;
         font-size: 1.25rem;
     }
@@ -278,7 +268,7 @@ body {
 
 /*MEDIUM (iPad)*/
 @media (max-width:768px) {
-    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover, .add:hover {
         width: 120%;
         font-size: 1.25rem;
     }
@@ -311,11 +301,11 @@ body {
     }
 
     .navbar {
-        position: absolute;
-        width: 100%;
-        background-color: #000000;
-        display: inline-block;
-    }
+         position: absolute;
+         width: 100%;
+         background-color: #000000;
+         display: inline-block;
+     }
 
     .nav-icons {
         display: none;
@@ -332,13 +322,14 @@ body {
     .home,
     .about-me,
     .portfolio,
-    .contacts {
+    .contacts,
+    .add {
         width: 100%;
         margin-top: 10%;
         font-size: 2rem;
     }
 
-    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
+    .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover, .add:hover {
         width: 100%;
         font-size: 2rem;
     }
@@ -395,13 +386,32 @@ body {
         margin-top: 3%;
         background-image: none;
     }
+
+    .admin-container {
+        position: relative;
+        width: 100%;
+        margin-top: 40%;
+    }
+
+    .admin-edit,
+    .admin-delete {
+        font-size: 1.6rem;
+        font-weight: bold;
+        width: 30%;
+    }
+
+    .buttons .admin-delete {
+        background-color: #ff0000;
+        color: #ffffff;
+    }
 }
 
 /*X-SMALL (iPhone)*/
 @media (max-width:376px) {
     .about-me,
     .portfolio,
-    .contacts {
+    .contacts,
+    .add {
         margin-top: 15%;
     }
 
@@ -425,6 +435,12 @@ body {
 
     .project-link {
         width: 80%;
+    }
+
+    .admin-edit,
+    .admin-delete {
+        font-size: 1.2rem;
+        width: 40%;
     }
 
 }
