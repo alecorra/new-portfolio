@@ -334,20 +334,20 @@ body {
         font-size: 2rem;
     }
 
-    #aboutMeNav .logo {
+    #navDefault .logo {
     display: none;
     }
 
-    #aboutMeNav .home,
-    #aboutMeNav .about-me,
-    #aboutMeNav .portfolio,
-    #aboutMeNav .contacts {
+    #navDefault .home,
+    #navDefault .about-me,
+    #navDefault .portfolio,
+    #navDefault .contacts {
     width: 100%;
     margin-top: 0%;
     font-size: 1.5rem;
     }
 
-    #aboutMeNav .small-text-links {
+    #navDefault .small-text-links {
     display: none;
     }
 

@@ -10,7 +10,7 @@
 </head>
 <body>
 <!--===================================================== NAVBAR-->
-    <nav id="aboutMeNav" class="navbar">
+    <nav id="navDefault" class="navbar">
         <img class="logo" src="img/MyLogo.png">
         <a class="home" href="index.html">HOME</a>
         <a class="about-me active" href="aboutMe.html">ABOUT ME</a>
