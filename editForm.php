@@ -1,10 +1,8 @@
-<?php require('dbPic.php'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alessandro Corrá</title>
+    <title>Alessandro Corrá / ADMIN EDIT FORM</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +13,8 @@
     <nav id="aboutMeNav" class="navbar">
         <img class="logo" src="img/MyLogo.png">
         <a class="home" href="index.html">HOME</a>
-        <a class="about-me" href="aboutMe.html">ABOUT ME</a>
-        <a class="portfolio active" href="portfolio.php">PORTFOLIO</a>
+        <a class="about-me active" href="aboutMe.html">ABOUT ME</a>
+        <a class="portfolio" href="portfolio.php">PORTFOLIO</a>
         <a class="contacts" href="#">CONTACTS</a>
         <div class="nav-icons">
             <a href="https://github.com/alecorra" target="_blank">
@@ -28,19 +26,22 @@
         </div>
         <a class="small-text-links" href="#">Alessandro Corrá 2019</a>
     </nav>
-<!--===================================================== PORTFOLIO-->
-    <div class="content-container-portfolio">
-        <div class="project-container">
-            <?php
-                if (!empty($result)) {
-                    foreach ($result as $img) {
-                        echo '<a href="' . $img['url'] . '"><img class="project-link" src="' . $img['project_pic'] . '"></a>';
-            }
-            } else {
-            echo '<p>Oops! Something went wrong. This page didn\'t load properly</p>';
-            }
-            ?>
-        </div>
+<!--===================================================== ABOUT ME-->
+    <div>
+        <form method="POST" action="editUpdateComand.php">
+            <?php echo '<input type="hidden" name="id" value="' .  $id . '">';?>
+            <br>
+            <br>
+            <label>Project Pic</label>
+            <input type="text" name="project_pic" value="<?php echo $result['project_pic']; ?>">
+            <br>
+            <br>
+            <label>Url</label>
+            <input type="text" name="url" value="<?php echo $result['url']; ?>">
+            <br>
+            <br>
+            <input type="submit" value="Edit">
+        </form>
     </div>
 
 </body>
