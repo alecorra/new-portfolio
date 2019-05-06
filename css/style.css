@@ -232,13 +232,28 @@ body {
 
 /*===================================================== ADMIN FORMS*/
 
-/*div {*/
-    /*display: inline-block;*/
-    /*width: 50%;*/
-    /*text-align: right;*/
-    /*color: white;*/
-    /*font-size: 1rem;*/
-/*}*/
+.admin-form-container {
+    text-align: center;
+    width: 85%;
+    float: right;
+}
+
+.admin-form {
+    display: inline-block;
+    text-align: right;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 20%;
+}
+
+.add-form-header {
+    text-align: center;
+}
+
+.form-title {
+    color: #5e5d70;
+    font-size: 3rem;
+}
 
 /*===================================================== MEDIA QUERIES*/
 
@@ -341,9 +356,10 @@ body {
     #navDefault .home,
     #navDefault .about-me,
     #navDefault .portfolio,
-    #navDefault .contacts {
+    #navDefault .contacts,
+    #navDefault .add {
     width: 100%;
-    margin-top: 0%;
+    margin-top: 1%;
     font-size: 1.5rem;
     }
 
@@ -404,6 +420,18 @@ body {
         background-color: #ff0000;
         color: #ffffff;
     }
+
+    .admin-form-container {
+        width: 100%;
+        position: relative;
+        margin-top: 30%;
+
+    }
+
+    .admin-form {
+        font-size: 1.2rem;
+    }
+
 }
 
 /*X-SMALL (iPhone)*/
