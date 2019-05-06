@@ -1,8 +1,10 @@
+<?php require('php/dbPic.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alessandro Corrá / About me</title>
+    <title>Alessandro Corrá</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,8 +15,8 @@
     <nav id="aboutMeNav" class="navbar">
         <img class="logo" src="img/MyLogo.png">
         <a class="home" href="index.html">HOME</a>
-        <a class="about-me active" href="aboutMe.html">ABOUT ME</a>
-        <a class="portfolio" href="portfolio.php">PORTFOLIO</a>
+        <a class="about-me" href="aboutMe.html">ABOUT ME</a>
+        <a class="portfolio active" href="portfolio.php">PORTFOLIO</a>
         <a class="contacts" href="#">CONTACTS</a>
         <div class="nav-icons">
             <a href="https://github.com/alecorra" target="_blank">
@@ -26,10 +28,19 @@
         </div>
         <a class="small-text-links" href="#">Alessandro Corrá 2019</a>
     </nav>
-<!--===================================================== ABOUT ME-->
-    <div id="aboutMeContainer" class="content-container">
-        <img class="about-me-pic" src="img/me.jpg">
-        <p class="about-me-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<!--===================================================== PORTFOLIO-->
+    <div class="content-container-portfolio">
+        <div class="project-container">
+            <?php
+                if (!empty($result)) {
+                    foreach ($result as $img) {
+                        echo '<a href="' . $img['url'] . '"><img class="project-link" src="' . $img['project_pic'] . '"></a>';
+            }
+            } else {
+            echo '<p>Oops! Something went wrong. This page didn\'t load properly</p>';
+            }
+            ?>
+        </div>
     </div>
 
 </body>

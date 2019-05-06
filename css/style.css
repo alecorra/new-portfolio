@@ -147,12 +147,98 @@ body {
 }
 
 /*===================================================== PORTFOLIO*/
+
+.project-container {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.project-link {
+    width: 25%;
+    margin: 2% 10%;
+    border-radius: 30%;
+    border: 2px solid #5e5d70;
+}
+
+.content-container-portfolio {
+    background-image: url("../img/open-laptop.jpg");
+    display: inline-block;
+    width: 85%;
+    float: right;
+    margin-top: 3%;
+    margin-right: 1%;
+}
+
 /*===================================================== CONTACTS*/
 
 
 
-/*===================================================== ADMIN*/
+/*===================================================== ADMIN PANEL*/
 
+.admin-new-project,
+.admin-home {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 75%;
+    font-family: "Avenir Next";
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-new-project:hover,
+.admin-home:hover,
+.admin-edit:hover {
+    background-color: #ff0000;
+}
+
+.admin-delete:hover {
+    background-color: #ffff00;
+}
+
+.admin-container {
+    display: inline-block;
+    width: 85%;
+    float: right;
+    margin-top: 3%;
+    margin-right: 1%;
+}
+
+.admin-project-container {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.admin-project-link {
+    width: 25%;
+    border-radius: 30%;
+    border: 5px solid #5e5d70;
+}
+
+.admin-edit,
+.admin-delete {
+    display: inline-block;
+    margin: 0 auto;
+    width: 10%;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Avenir Next";
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buttons .admin-delete {
+    color:#ff0000;
+}
+
+.buttons {
+    margin: 2% 0 10% 0;
+}
 
 /*===================================================== MEDIA QUERIES*/
 
