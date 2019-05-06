@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alessandro Corrá / ADMIN ADD FORM</title>
+    <title>Alessandro Corrá / ADMIN LOGIN</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,30 +12,24 @@
 <!--===================================================== NAVBAR-->
     <nav id="navDefault" class="navbar">
         <img class="logo" src="img/MyLogo.png">
-        <a class="home" href="index.html">HOME</a>
-        <a class="portfolio" href="portfolio.php">PORTFOLIO</a>
-        <a class="add active" href="adminPanel.php">ADMIN PANEL</a>
+        <a class="home active" href="index.html">HOME</a>
     </nav>
 <!--===================================================== ADD FORM-->
     <div class="admin-form-container">
         <div class="admin-form">
 
-            <div class="add-form-header">
-                <h1 class="form-title">Add Form</h1>
+            <div class="login-form-header">
+                <h1 class="form-title">LOGIN</h1>
             </div>
 
-            <form method="post" action="addComand.php">
+            <form method = "POST" action="loginComand.php">
+                USERNAME <input type = "text" name = "username" required>
                 <br>
                 <br>
-                <label>Project Pic</label>
-                <input type="text" name="project_pic" required>
+                PASSWORD <input type = "password" name = "password" required>
                 <br>
                 <br>
-                <label>Url</label>
-                <input type="text" name="url" required>
-                <br>
-                <br>
-                <input type="submit" value="Add to database">
+                <input type = "submit" value="Go admin, go!">
             </form>
         </div>
     </div>

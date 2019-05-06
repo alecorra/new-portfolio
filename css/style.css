@@ -247,7 +247,8 @@ body {
 }
 
 .add-form-header,
-.edit-form-header {
+.edit-form-header,
+.login-form-header {
     text-align: center;
 }
 
@@ -272,7 +273,6 @@ body {
     }
 }
 
-
 /*LARGE (*/
 @media (max-width:992px) {
     .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover,.add:hover {
@@ -280,7 +280,6 @@ body {
         font-size: 1.25rem;
     }
 }
-
 
 /*MEDIUM (iPad)*/
 @media (max-width:768px) {
@@ -305,9 +304,7 @@ body {
         font-family: "Open Sans";
         font-size: 1.5rem;
     }
-
 }
-
 
 /*SMALL (iPad mini)*/
 @media (max-width: 576px){
@@ -426,13 +423,11 @@ body {
         width: 100%;
         position: relative;
         margin-top: 30%;
-
     }
 
     .admin-form {
         font-size: 1.2rem;
     }
-
 }
 
 /*X-SMALL (iPhone)*/
@@ -471,5 +466,4 @@ body {
         font-size: 1.2rem;
         width: 40%;
     }
-
 }
