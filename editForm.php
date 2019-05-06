@@ -1,3 +1,5 @@
+<?php require 'editFetchComand.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,35 +15,32 @@
     <nav id="navDefault" class="navbar">
         <img class="logo" src="img/MyLogo.png">
         <a class="home" href="index.html">HOME</a>
-        <a class="about-me active" href="aboutMe.html">ABOUT ME</a>
         <a class="portfolio" href="portfolio.php">PORTFOLIO</a>
-        <a class="contacts" href="#">CONTACTS</a>
-        <div class="nav-icons">
-            <a href="https://github.com/alecorra" target="_blank">
-                <i class="fa fa-github-square"> </i>
-            </a>
-            <a href="https://www.linkedin.com/in/alessandro-corr%C3%A1-ab4a45156/" target="_blank">
-                <i class="fa fa-linkedin-square"> </i>
-            </a>
-        </div>
-        <a class="small-text-links" href="#">Alessandro Corrá 2019</a>
+        <a class="add active" href="adminPanel.php">ADMIN PANEL</a>
     </nav>
-<!--===================================================== ABOUT ME-->
-    <div>
-        <form method="POST" action="editUpdateComand.php">
-            <?php echo '<input type="hidden" name="id" value="' .  $id . '">';?>
-            <br>
-            <br>
-            <label>Project Pic</label>
-            <input type="text" name="project_pic" value="<?php echo $result['project_pic']; ?>">
-            <br>
-            <br>
-            <label>Url</label>
-            <input type="text" name="url" value="<?php echo $result['url']; ?>">
-            <br>
-            <br>
-            <input type="submit" value="Edit">
-        </form>
+<!--===================================================== EDIT FORM-->
+    <div class="admin-form-container">
+        <div class="admin-form">
+
+            <div class="edit-form-header">
+                <h1 class="form-title">Edit Form</h1>
+            </div>
+
+            <form method="POST" action="editUpdateComand.php">
+                <?php echo '<input type="hidden" name="id" value="' .  $id . '">';?>
+                <br>
+                <br>
+                <label>Project Pic</label>
+                <input type="text" name="project_pic" value="<?php echo $result['project_pic']; ?>">
+                <br>
+                <br>
+                <label>Url</label>
+                <input type="text" name="url" value="<?php echo $result['url']; ?>">
+                <br>
+                <br>
+                <input type="submit" value="Edit">
+            </form>
+        </div>
     </div>
 
 </body>

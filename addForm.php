@@ -19,6 +19,7 @@
 <!--===================================================== ADD FORM-->
     <div class="admin-form-container">
         <div class="admin-form">
+
             <div class="add-form-header">
                 <h1 class="form-title">Add Form</h1>
             </div>
@@ -38,7 +39,6 @@
             </form>
         </div>
     </div>
-
 
 </body>
 </html>

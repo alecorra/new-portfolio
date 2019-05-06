@@ -15,10 +15,22 @@ if (!empty($_POST['project_pic']) && (!empty($_POST['url']))) {
     $query->bindParam(':url', $url, PDO::PARAM_STR);
     $result = $query->execute();
     if ($result) {
-        header('location: adminPanel.php');
+        echo 'UPDATE SUCCESS!';
+        echo '<br>';
+        echo '<br>';
+        echo '<a class="admin-edit" href="adminPanel.php">ADMIN PANEL</a>';
+        echo '<br>';
+        echo '<br>';
+        echo '<a class="admin-edit" href="index.html">HOME</a>';
     } else {
         echo errorMsg();
-    };
+        echo '<br>';
+        echo '<br>';
+        echo '<a class="admin-edit" href="adminPanel.php">ADMIN PANEL</a>';
+    }
 } else {
     echo errorMsg();
+    echo '<br>';
+    echo '<br>';
+    echo '<a class="admin-edit" href="adminPanel.php">ADMIN PANEL</a>';
 }
