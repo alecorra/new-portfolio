@@ -16,7 +16,7 @@
         <img class="logo" src="img/MyLogo.png">
         <a class="home" href="index.html">HOME</a>
         <a class="portfolio" href="portfolio.php">PORTFOLIO</a>
-        <a class="add active" href="#">ADD NEW PROJECT</a>
+        <a class="add active" href="addForm.php">ADD NEW PROJECT</a>
     </nav>
 <!--===================================================== ADMIN PANEL-->
     <div class="admin-container">
