@@ -155,10 +155,10 @@ body {
 }
 
 .project-link {
-    width: 25%;
-    margin: 2% 10%;
+    width: 30%;
+    margin: 3% 5%;
     border-radius: 30%;
-    border: 2px solid #5e5d70;
+    border: 5px solid #5e5d70;
 }
 
 .content-container-portfolio {
@@ -259,6 +259,11 @@ body {
         font-size: 1.6rem;
         font-weight: bold;
     }
+
+    .project-link {
+        width: 45%;
+        margin: 1% 5%;
+    }
 }
 
 
@@ -294,6 +299,7 @@ body {
         font-family: "Open Sans";
         font-size: 1.5rem;
     }
+
 }
 
 
@@ -335,7 +341,6 @@ body {
     .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover {
         width: 100%;
         font-size: 2rem;
-        font-weight: lighter;
     }
 
     #aboutMeNav .logo {
@@ -371,10 +376,29 @@ body {
         font-family: "Open Sans";
         font-size: 1.2rem;
     }
+
+    .project-container {
+        position: relative;
+        width: 100%;
+        margin-top: 25%;
+    }
+
+    .project-link {
+        width: 60%;
+        margin-top: 5%;
+        border: 3px solid #ff0000;
+    }
+
+    .content-container-portfolio {
+        width: 100%;
+        float: none;
+        margin-top: 3%;
+        background-image: none;
+    }
 }
 
 /*X-SMALL (iPhone)*/
-@media (max-width:375px) {
+@media (max-width:376px) {
     .about-me,
     .portfolio,
     .contacts {
@@ -394,4 +418,13 @@ body {
         margin: 15% 0 0 5%;
         font-size: 1rem;
     }
+
+    .project-container {
+        margin-top: 30%;
+    }
+
+    .project-link {
+        width: 80%;
+    }
+
 }
