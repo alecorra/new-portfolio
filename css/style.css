@@ -194,7 +194,44 @@ body {
 
 /*===================================================== CONTACTS*/
 
+.phone {
+    position: absolute;
+    width: 40%;
+    margin: 25% 0 0 40%;
+    display: block;
+}
 
+.phone .fa {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.email {
+    position: absolute;
+    width: 40%;
+    margin: 35% 0 0 40%;
+    display: block;
+}
+
+.email .fa {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.email span {
+    color: #ff0000;
+    font-size: 1.4rem;
+}
+
+.contacts-container p {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 2rem;
+    float: right;
+    margin-top: 1%;
+    z-index: -1;
+}
 
 /*===================================================== ADMIN PANEL*/
 
@@ -288,13 +325,25 @@ body {
         width: 45%;
         margin: 1% 5%;
     }
+
+    .phone,
+    .email {
+        font-size: 1rem;
+        width: 50%;
+    }
 }
 
-/*LARGE (*/
+/*LARGE (Ipad pro)*/
 @media (max-width:992px) {
     .home:hover, .about-me:hover, .portfolio:hover, .contacts:hover,.add:hover {
         width: 120%;
         font-size: 1.25rem;
+    }
+
+    .phone,
+    .email {
+        font-size: 1rem;
+        width: 60%;
     }
 }
 
@@ -326,6 +375,24 @@ body {
     .header-home-second {
         font-size: 2.5rem;
     }
+
+    .phone,
+    .email {
+        width: 70%;
+    }
+
+    .phone {
+        margin: 25% 0 0 25%;
+    }
+
+    .email {
+        margin: 35% 0 0 25%;
+    }
+
+    .phone .fa, .email .fa {
+        font-size: 2rem;
+    }
+
 }
 
 /*SMALL (iPad mini)*/
@@ -450,6 +517,27 @@ body {
     .admin-form {
         font-size: 1.2rem;
     }
+
+    .phone,
+    .email {
+        width: 90%;
+    }
+
+    .phone {
+        margin: 60% 0 0 5%;
+    }
+
+    .email {
+        margin: 90% 0 0 5%;
+    }
+
+    .phone .fa, .email .fa {
+        font-size: 2rem;
+    }
+
+    .phone p, .email p {
+        font-size: 1.4rem;
+    }
 }
 
 /*X-SMALL (iPhone)*/
@@ -488,4 +576,5 @@ body {
         font-size: 1.2rem;
         width: 40%;
     }
+
 }

@@ -17,7 +17,7 @@
         <a class="home" href="index.html">HOME</a>
         <a class="about-me" href="aboutMe.html">ABOUT ME</a>
         <a class="portfolio active" href="portfolio.php">PORTFOLIO</a>
-        <a class="contacts" href="#">CONTACTS</a>
+        <a class="contacts" href="contacts.html">CONTACTS</a>
         <div class="nav-icons">
             <a href="https://github.com/alecorra" target="_blank">
                 <i class="fa fa-github-square"> </i>
