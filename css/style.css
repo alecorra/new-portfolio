@@ -22,7 +22,7 @@ body {
 
 .logo {
     display: block;
-    margin: 5% 0 0 5%;
+    margin: 30% 0 0 5%;
     width: 90%;
 }
 
@@ -35,7 +35,7 @@ body {
     width: 100%;
     color: #ffffff;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 30%;
     font-family: "Avenir Next";
     font-size: 1rem;
     text-decoration: none;
@@ -91,9 +91,10 @@ body {
 
 .home-container {
     position: relative;
-    width: 80%;
+    width: 106%;
     float: right;
-    margin: 3% 2% 0 0;
+    margin: 5% 0% 0 0;
+    z-index: -1;
 }
 
 .home-container img {
@@ -367,7 +368,7 @@ body {
 
     #aboutMeContainer .about-me-pic {
         position: relative;
-        margin: 30% 0 0 30%;
+        margin: 35% 0 0 30%;
         width: 40%;
         border-radius: 50%;
     }
